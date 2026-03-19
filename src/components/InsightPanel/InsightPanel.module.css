@@ -1,0 +1,167 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  overflow-y: auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.icon {
+  font-size: var(--text-base);
+}
+
+.sectionTitle {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Hotspot Cards ── */
+.hotspots {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.hotspotCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
+}
+
+.hotspotCard:hover {
+  background: var(--color-bg-card-hover);
+}
+
+.hotspotCard.critical { border-left: 3px solid var(--color-risk-critical); }
+.hotspotCard.high     { border-left: 3px solid var(--color-risk-high); }
+.hotspotCard.medium   { border-left: 3px solid var(--color-risk-medium); }
+.hotspotCard.low      { border-left: 3px solid var(--color-risk-low); }
+
+.hotspotRank {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-muted);
+  min-width: 28px;
+  font-family: var(--font-mono);
+}
+
+.hotspotInfo {
+  flex: 1;
+}
+
+.hotspotName {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.hotspotBand {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.hotspotScore {
+  text-align: right;
+}
+
+.scoreValue {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  font-family: var(--font-mono);
+  color: var(--color-text-primary);
+}
+
+.scoreDelta {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+}
+
+.negative { color: var(--color-risk-critical); }
+.positive { color: var(--color-risk-low); }
+
+/* ── Prescription ── */
+.prescriptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.prescriptionCard {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-accent-purple);
+}
+
+.highlight {
+  color: var(--color-accent-cyan);
+  font-weight: var(--weight-semibold);
+  font-family: var(--font-mono);
+}
+
+/* ── Selected State Detail ── */
+.detailCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailRow span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.detailRow span:last-child {
+  color: var(--color-text-primary);
+  font-weight: var(--weight-medium);
+  font-family: var(--font-mono);
+}
+
+.empty {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: var(--space-4);
+}

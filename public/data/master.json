@@ -1,0 +1,268 @@
+{
+  "generated_at": "2026-03-19",
+  "formula": "RI = 100 - (norm_suicide×40) - (norm_unemployment×35) - (norm_cpi×25)",
+  "sources": {
+    "lfs_district": "OpenDOSM — Labour Force Survey by district",
+    "cpi_2d_state": "OpenDOSM — CPI by state and division (2010 base year)",
+    "death_w_coa": "OpenDOSM 2024 Annual Statistics Report — Intentional self-harm (ICD-10 X60–X84)",
+    "dosm_population_2023": "DOSM — Mid-year population estimates 2023"
+  },
+  "states": [
+    {
+      "id": "wp_labuan",
+      "name": "W.P. Labuan",
+      "baseline": {
+        "unemployment_rate": 3.64,
+        "cpi_index": 123.76,
+        "suicide_rate_per_100k": 10.82,
+        "resilience_index": 47.15
+      },
+      "risk_band": "high",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "wp_putrajaya",
+      "name": "W.P. Putrajaya",
+      "baseline": {
+        "unemployment_rate": 3.64,
+        "cpi_index": 136.02,
+        "suicide_rate_per_100k": 5.19,
+        "resilience_index": 47.45
+      },
+      "risk_band": "high",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "pulau_pinang",
+      "name": "Pulau Pinang",
+      "baseline": {
+        "unemployment_rate": 2.88,
+        "cpi_index": 132.33,
+        "suicide_rate_per_100k": 6.79,
+        "resilience_index": 52.5
+      },
+      "risk_band": "medium",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "selangor",
+      "name": "Selangor",
+      "baseline": {
+        "unemployment_rate": 3.52,
+        "cpi_index": 134.9,
+        "suicide_rate_per_100k": 4.09,
+        "resilience_index": 54.75
+      },
+      "risk_band": "medium",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "wp_kuala_lumpur",
+      "name": "W.P. Kuala Lumpur",
+      "baseline": {
+        "unemployment_rate": 3.64,
+        "cpi_index": 128.72,
+        "suicide_rate_per_100k": 6.49,
+        "resilience_index": 55.63
+      },
+      "risk_band": "medium",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "johor",
+      "name": "Johor",
+      "baseline": {
+        "unemployment_rate": 3.13,
+        "cpi_index": 136.91,
+        "suicide_rate_per_100k": 3.02,
+        "resilience_index": 57.83
+      },
+      "risk_band": "medium",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "sabah",
+      "name": "Sabah",
+      "baseline": {
+        "unemployment_rate": 7.3,
+        "cpi_index": 126.68,
+        "suicide_rate_per_100k": 1.12,
+        "resilience_index": 58.4
+      },
+      "risk_band": "medium",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "perak",
+      "name": "Perak",
+      "baseline": {
+        "unemployment_rate": 4.43,
+        "cpi_index": 127.23,
+        "suicide_rate_per_100k": 3.37,
+        "resilience_index": 66.16
+      },
+      "risk_band": "medium",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "negeri_sembilan",
+      "name": "Negeri Sembilan",
+      "baseline": {
+        "unemployment_rate": 3.87,
+        "cpi_index": 127.93,
+        "suicide_rate_per_100k": 3.29,
+        "resilience_index": 68.69
+      },
+      "risk_band": "medium",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "kedah",
+      "name": "Kedah",
+      "baseline": {
+        "unemployment_rate": 3.14,
+        "cpi_index": 126.79,
+        "suicide_rate_per_100k": 2.67,
+        "resilience_index": 77.88
+      },
+      "risk_band": "low",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "terengganu",
+      "name": "Terengganu",
+      "baseline": {
+        "unemployment_rate": 3.66,
+        "cpi_index": 128.16,
+        "suicide_rate_per_100k": 1.15,
+        "resilience_index": 78.29
+      },
+      "risk_band": "low",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "perlis",
+      "name": "Perlis",
+      "baseline": {
+        "unemployment_rate": 3.64,
+        "cpi_index": 126.45,
+        "suicide_rate_per_100k": 1.9,
+        "resilience_index": 78.52
+      },
+      "risk_band": "low",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "pahang",
+      "name": "Pahang",
+      "baseline": {
+        "unemployment_rate": 2.62,
+        "cpi_index": 129.27,
+        "suicide_rate_per_100k": 2.05,
+        "resilience_index": 79.08
+      },
+      "risk_band": "low",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "kelantan",
+      "name": "Kelantan",
+      "baseline": {
+        "unemployment_rate": 3.39,
+        "cpi_index": 127.68,
+        "suicide_rate_per_100k": 1.0,
+        "resilience_index": 81.48
+      },
+      "risk_band": "low",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "sarawak",
+      "name": "Sarawak",
+      "baseline": {
+        "unemployment_rate": 4.01,
+        "cpi_index": 123.37,
+        "suicide_rate_per_100k": 1.69,
+        "resilience_index": 82.75
+      },
+      "risk_band": "low",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    },
+    {
+      "id": "melaka",
+      "name": "Melaka",
+      "baseline": {
+        "unemployment_rate": 1.7,
+        "cpi_index": 127.78,
+        "suicide_rate_per_100k": 2.58,
+        "resilience_index": 85.42
+      },
+      "risk_band": "low",
+      "data_sources": [
+        "lfs_district",
+        "cpi_2d_state",
+        "death_w_coa"
+      ]
+    }
+  ]
+}

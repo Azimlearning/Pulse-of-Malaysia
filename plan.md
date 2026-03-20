@@ -38,13 +38,15 @@
 - [x] Add micro-animations (slider → map color transition, panel update fade-in).
 - [x] Add data source citations (dataset IDs visible per chart).
 - [x] Add "Sources" modal accessible from header.
-- [ ] Implement mandatory logos: UKM, UKM Watan, Data Challenge 5.0, SDG 3, SDG 8.
-- [ ] Responsive check (desktop-first, but functional on tablet).
+- [x] Implement logo placeholder system (`LogoBar` component + `logos.config.ts`).
+- [x] Responsive layout (tablet ≤1024px stacks map over sidebar; mobile header shrinks).
 
 ---
 
-## Phase 5: Deliverables Prep
-- [ ] Deploy to Vercel, test public URL.
+## Phase 5: Deliverables Prep [ACTIVE]
+- [x] Create `vercel.json` + `next.config.ts` for deployment.
+- [ ] **Deploy to Vercel** — push to GitHub → connect repo in Vercel dashboard → verify public URL.
+- [ ] **Drop real logos** — add PNGs to `public/logos/`, set `available: true` in `logos.config.ts`.
 - [ ] Record dashboard demo video (max 3 min) as backup.
 - [ ] Design Infographic Poster (A3).
 - [ ] Create Project Summary Slides (max 25 slides).

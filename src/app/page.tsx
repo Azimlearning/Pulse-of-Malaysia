@@ -5,6 +5,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import MapView from "@/components/MapView/MapView";
 import InsightPanel from "@/components/InsightPanel/InsightPanel";
 import SourcesModal from "@/components/SourcesModal/SourcesModal";
+import LogoBar from "@/components/LogoBar/LogoBar";
 import { loadMasterData } from "@/lib/data";
 import { calculateRisk } from "@/lib/simulator";
 import type { SimulatorDeltas, RiskResult, StateData } from "@/lib/types";
@@ -21,11 +22,8 @@ export default function HomePage() {
   const [results, setResults] = useState<RiskResult[] | undefined>(undefined);
   const [selectedStateId, setSelectedStateId] = useState<string | null>(null);
   const [sourcesOpen, setSourcesOpen] = useState(false);
-
-  // Cache the base state data so we don't re-fetch on every delta change
   const baseStatesRef = useRef<StateData[]>([]);
 
-  // Load master data once on mount
   useEffect(() => {
     loadMasterData()
       .then((data) => {
@@ -35,7 +33,6 @@ export default function HomePage() {
       .catch((err) => console.error("Failed to load master data:", err));
   }, []);
 
-  // Re-run simulator whenever deltas change (instant — no re-fetch needed)
   useEffect(() => {
     if (baseStatesRef.current.length === 0) return;
     setResults(calculateRisk(baseStatesRef.current, deltas));
@@ -50,21 +47,14 @@ export default function HomePage() {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.logoBar}>
-          {/* SDG badge row */}
-          <div className={styles.sdgBadges}>
-            <span className={styles.sdgBadge} style={{ background: "#4c9a2a" }}>SDG 3</span>
-            <span className={styles.sdgBadge} style={{ background: "#a21942" }}>SDG 8</span>
-          </div>
-          <span className={styles.headerTitle}>Resilience Radar · UKM Data Challenge 5.0</span>
-          <button
-            id="sources-btn"
-            className={styles.sourcesBtn}
-            onClick={() => setSourcesOpen(true)}
-          >
-            📊 View Sources
-          </button>
-        </div>
+        <LogoBar />
+        <button
+          id="sources-btn"
+          className={styles.sourcesBtn}
+          onClick={() => setSourcesOpen(true)}
+        >
+          📊 Sources
+        </button>
       </header>
 
       <main className={styles.layout}>
